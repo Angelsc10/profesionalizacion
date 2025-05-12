@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productos</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .product-item {
+            border: 1px solid #ddd;
+            padding: 15px;
+            text-align: center;
+        }
+
+        .product-item img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .product-item h3 {
+            margin-top: 10px;
+            font-size: 1.2em;
+        }
+
+        .product-item p {
+            margin: 10px 0;
+        }
+
+        .product-item .price {
+            font-weight: bold;
+            color: #0066cc;
+        }
+
+        .product-item .add-to-cart {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        .product-item .add-to-cart:hover {
+            background-color: #3e8e41;
+        }
+
+        .product-item input[type="number"] {
+            width: 50px;
+            padding: 5px;
+            margin-right: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1 class="titulo-inicio">Chamito Tech Tienda Electrónica</h1>
+    </header>
+
+    <section class="nav-index">
+        <nav>
+            <a style="color: #fff;" href="index.html">Inicio</a>
+            <a style="color: #fff;" href="productos.html">Productos</a>
+            <a style="color: #fff;" href="carrito.html">Carrito</a>
+            <a style="color: #fff;" href="ayuda.html">Ayuda</a>
+        </nav>
+    </section>
+
+    <section class="product-grid">
+        <div class="product-item">
+            <img src="placeholder_computadora.jpg" alt="Computadora">
+            <h3>Computadora Gaming X</h3>
+            <p>Procesador Intel i7, 16GB RAM, SSD 512GB.</p>
+            <p class="price">$1200</p>
+            <input type="number" value="1" min="1" class="quantity">
+            <button class="add-to-cart" data-name="Computadora Gaming X" data-price="1200">Añadir al carrito</button>
+        </div>
+
+        <div class="product-item">
+            <img src="placeholder_teclado.jpg" alt="Teclado">
+            <h3>Teclado Mecánico RGB</h3>
+            <p>Teclado mecánico con retroiluminación RGB.</p>
+            <p class="price">$80</p>
+            <input type="number" value="1" min="1" class="quantity">
+            <button class="add-to-cart" data-name="Teclado Mecánico RGB" data-price="80">Añadir al carrito</button>
+        </div>
+
+        <div class="product-item">
+            <img src="placeholder_mouse.jpg" alt="Mouse">
+            <h3>Mouse Inalámbrico Pro</h3>
+            <p>Mouse inalámbrico de alta precisión.</p>
+            <p class="price">$50</p>
+            <input type="number" value="1" min="1" class="quantity">
+            <button class="add-to-cart" data-name="Mouse Inalámbrico Pro" data-price="50">Añadir al carrito</button>
+        </div>
+
+        <div class="product-item">
+            <img src="placeholder_audifonos.jpg" alt="Audíonos">
+            <h3>Audíonos Gaming 7.1</h3>
+            <p>Audíonos de alta calidad con sonido envolvente 7.1.</p>
+            <p class="price">$120</p>
+            <input type="number" value="1" min="1" class="quantity">
+            <button class="add-to-cart" data-name="Audíonos Gaming 7.1" data-price="120">Añadir al carrito</button>
+        </div>
+
+        <div class="product-item">
+            <img src="placeholder_monitor.jpg" alt="Monitor">
+            <h3>Monitor 27" Curvo</h3>
+            <p>Monitor curvo de 27 pulgadas con resolución 1440p.</p>
+            <p class="price">$300</p>
+            <input type="number" value="1" min="1" class="quantity">
+            <button class="add-to-cart" data-name="Monitor 27\" Curvo" data-price="300">Añadir al carrito</button>
+        </div>
+    </section>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const addToCartButtons = document.querySelectorAll('.add-to-cart');
+
+            addToCartButtons.forEach(button => {
+                button.addEventListener('click', function () {
+                    const product = {
+                        name: this.dataset.name,
+                        price: parseFloat(this.dataset.price),
+                        quantity: parseInt(this.parentNode.querySelector('.quantity').value)
+                    };
+
+                    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+                    let existingProduct = cart.find(item => item.name === product.name);
+
+                    if (existingProduct) {
+                        existingProduct.quantity += product.quantity;
+                    } else {
+                        cart.push(product);
+                    }
+
+                    localStorage.setItem('cart', JSON.stringify(cart));
+                    alert(`${product.quantity} ${product.name}(s) added to cart!`);
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

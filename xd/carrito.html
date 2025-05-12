@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .cart-container {
+            padding: 20px;
+        }
+
+        .cart-items {
+            margin-bottom: 20px;
+        }
+
+        .cart-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #ddd;
+            padding: 10px 0;
+        }
+
+        .cart-item .item-name {
+            font-weight: bold;
+        }
+
+        .cart-item .item-quantity {
+            margin: 0 10px;
+        }
+
+        .cart-total {
+            text-align: right;
+            font-size: 1.2em;
+            font-weight: bold;
+        }
+
+        .checkout-button {
+            background-color: #0066cc;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            font-size: 1.1em;
+            margin-top: 20px;
+        }
+
+        .checkout-button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1 class="titulo-inicio">Chamito Tech Tienda Electrónica</h1>
+    </header>
+
+    <section class="nav-index">
+        <nav>
+            <a style="color: #fff;" href="index.html">Inicio</a>
+            <a style="color: #fff;" href="productos.html">Productos</a>
+            <a style="color: #fff;" href="carrito.html">Carrito</a>
+            <a style="color: #fff;" href="ayuda.html">Ayuda</a>
+        </nav>
+    </section>
+
+    <section class="cart-container">
+        <h2>Carrito de Compras</h2>
+        <div class="cart-items">
+            </div>
+        <div class="cart-total">
+            Total: $<span id="cart-total-price">0</span>
+        </div>
+        <button class="checkout-button">Comprar</button>
+    </section>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const cartItemsDiv = document.querySelector('.cart-items');
+            const cartTotalPriceSpan = document.querySelector('#cart-total-price');
+            const checkoutButton = document.querySelector('.checkout-button');
+
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+            function displayCart() {
+                cartItemsDiv.innerHTML = '';
+                let totalPrice = 0;
+
+                cart.forEach(item => {
+                    const itemTotal = item.price * item.quantity;
+                    totalPrice += itemTotal;
+
+                    const cartItemDiv = document.createElement('div');
+                    cartItemDiv.classList.add('cart-item');
+                    cartItemDiv.innerHTML = `
+                        <span class="item-name">${item.name}</span>
+                        <span class="item-quantity">Cantidad: ${item.quantity}</span>
+                        <span>$${itemTotal.toFixed(2)}</span>
+                    `;
+                    cartItemsDiv.appendChild(cartItemDiv);
+                });
+
+                cartTotalPriceSpan.textContent = totalPrice.toFixed(2);
+            }
+
+            displayCart();
+
+            checkoutButton.addEventListener('click', function () {
+                let totalPrice = parseFloat(cartTotalPriceSpan.textContent);
+                const iva = totalPrice * 0.16;  // 16% IVA (Mexico)
+                const finalTotal = totalPrice + iva;
+
+                alert(`
+                    Subtotal: $${totalPrice.toFixed(2)}
+                    IVA (16%): $${iva.toFixed(2)}
+                    Total: $${finalTotal.toFixed(2)}
+                `);
+
+                localStorage.removeItem('cart'); // Clear the cart after "purchase"
+                cart = [];
+                displayCart();
+            });
+        });
+    </script>
+</body>
+
+</html>
