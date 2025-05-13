@@ -37,23 +37,12 @@ document.addEventListener('DOMContentLoaded', function () {
         let totalPrice = parseFloat(cartTotalPriceSpan.textContent);
         const iva = totalPrice * 0.16;  // 16% IVA (Mexico)
         const finalTotal = totalPrice + iva;
-        
-        // Generate a random invoice number and today's date
-        const invoiceNumber = Math.floor(100000 + Math.random() * 900000);
-        const today = new Date();
-        const dateStr = today.toLocaleDateString('es-MX');
 
-        // Create invoice HTML
+        // Html de la compra
         const invoiceHTML = `
             <div class="invoice-container">
                 <div class="invoice-header">
-                    <h2>Chamito Tech - Factura</h2>
-                    <p>Tienda Electrónica</p>
-                </div>
-                <div class="invoice-details">
-                    <p><strong>Factura N°:</strong> ${invoiceNumber}</p>
-                    <p><strong>Fecha:</strong> ${dateStr}</p>
-                </div>
+                    <h2>Gracias por tu compra</h2>
                 <table class="invoice-items">
                     <thead>
                         <tr>
@@ -80,13 +69,11 @@ document.addEventListener('DOMContentLoaded', function () {
                     <p style="font-size: 1.2em;"><strong>Total:</strong> $${finalTotal.toFixed(2)}</p>
                 </div>
                 <div class="invoice-footer">
-                    <p>¡Gracias por tu compra en Chamito Tech!</p>
-                    <p>Conserva esta factura para cualquier cambio o devolución.</p>
                 </div>
             </div>
         `;
 
-        // Create a modal dialog to display the invoice
+        // Diseño
         const modalOverlay = document.createElement('div');
         modalOverlay.style.position = 'fixed';
         modalOverlay.style.top = '0';
@@ -97,12 +84,11 @@ document.addEventListener('DOMContentLoaded', function () {
         modalOverlay.style.display = 'flex';
         modalOverlay.style.justifyContent = 'center';
         modalOverlay.style.alignItems = 'center';
-        modalOverlay.style.zIndex = '1000';
         
-        // Add invoice to the modal
+        // visualizar el html
         modalOverlay.innerHTML = invoiceHTML;
         
-        // Close button
+        // diseño del boton para finalizar
         const closeButton = document.createElement('button');
         closeButton.textContent = 'Cerrar y Finalizar';
         closeButton.style.position = 'absolute';
@@ -116,7 +102,6 @@ document.addEventListener('DOMContentLoaded', function () {
         
         closeButton.addEventListener('click', function() {
             document.body.removeChild(modalOverlay);
-            // Clear the cart after the invoice is closed
             localStorage.removeItem('cart');
             cart = [];
             displayCart();
@@ -124,7 +109,7 @@ document.addEventListener('DOMContentLoaded', function () {
         
         modalOverlay.querySelector('.invoice-container').appendChild(closeButton);
         
-        // Add the modal to the page
+        // añadimos el ticket de compra
         document.body.appendChild(modalOverlay);
     });
 });

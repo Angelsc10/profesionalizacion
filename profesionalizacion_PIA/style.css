@@ -1,207 +1,317 @@
-        /* index */
-        .index-content {
-            padding: 20px;
-            margin-top: 20px;
-            color: #fff;
-        }
+/* Estilos generales*/
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0; 
+    color: #333;
+}
 
-        .featured-products {
-            display: flex;
-            justify-content: space-around;
-            flex-wrap: wrap;
-            margin-top: 20px;
-        }
+/* Header estilo */
+header {
+    background: linear-gradient(to right, #003366, #004080); 
+    color: white;
+    text-align: center;
+    padding: 1em 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+}
 
-        .product-card {
-            border: 1px solid #ddd;
-            padding: 10px;
-            margin: 10px;
-            text-align: center;
-            width: 200px;
-        }
+.titulo-inicio {
+    font-size: 2.5em;
+    margin-bottom: 0.5em;
+}
 
-        .product-card img {
-            max-width: 100%;
-            height: auto;
-        }
-        
-        .titulo-inicio {
-            color: #fff;
-            text-align: center;
-            margin-top: 20px;
-            font-size: 50px
-        }
+/* Nav estilo */
+nav {
+    background-color: #0056b3; 
+    display: flex;
+    justify-content: center;
+    padding: 0.5em 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
 
-        nav {
-            display: flex;
-            justify-content: center;
-            gap: 50px;
-            margin-top: 20px;
-        }
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5em 1em;
+    margin: 0 1em;
+    border-radius: 0.2em;
+}
 
-        .saludo_inicio {
-            color: #fff;
-            margin-top: 20px;
-            font-size: 30px;
-        }
+nav a:hover {
+    background-color: #004080;
+}
 
-        /* producto */
-        .product-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-            padding: 20px;
-        }
+/* Index estilo
+ */
+.index-content {
+    background-color: white;
+    padding: 1.5em;
+    margin: 1em auto;
+    max-width: 80%;
+    border-radius: 0.5em;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
 
-        .product-item {
-            border: 1px solid #ddd;
-            padding: 15px;
-            text-align: center;
-        }
+.saludo_inicio {
+    font-size: 1.8em;
+    color: #004080;
+    text-align: center;
+    margin-bottom: 1em;
+}
 
-        .product-item img {
-            max-width: 100%;
-            height: auto;
-        }
+.centrar {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 2em;
+    align-items: center;
+}
 
-        .product-item h3 {
-            margin-top: 10px;
-            font-size: 1.2em;
-        }
+.centrar p {
+    text-align: justify;
+    font-size: 1.1em;
+    line-height: 1.6;
+}
 
-        .product-item p {
-            margin: 10px 0;
-        }
+.centrar img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 0.5em;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
 
-        .product-item .price {
-            font-weight: bold;
-            color: #0066cc;
-        }
+/* Producttos grid */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5em;
+    padding: 1.5em;
+    background-color: #f9f9f9;
+    margin: 1em auto;
+    max-width: 90%;
+    border-radius: 0.5em;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
 
-        .product-item .add-to-cart {
-            background-color: #4CAF50;
-            color: white;
-            padding: 10px 15px;
-            border: none;
-            cursor: pointer;
-            margin-top: 10px;
-        }
+.product-item {
+    background-color: white;
+    border-radius: 0.5em;
+    padding: 1em;
+    text-align: center;
+    transition: transform 0.2s ease-in-out;
+}
 
-        .product-item .add-to-cart:hover {
-            background-color: #3e8e41;
-        }
+.product-item:hover {
+    transform: scale(1.02);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
 
-        .product-item input[type="number"] {
-            width: 50px;
-            padding: 5px;
-            margin-right: 5px;
-        }
-        .titulo-inicio {
-           color: #fff;
-           text-align: center;
-           margin-top: 20px;
-           font-size: 50px
-       }
-       nav {
-            display: flex;
-            justify-content: center;
-            gap: 50px;
-            margin-top: 20px;
-        }
+.product-item img {
+    max-width: 80%;
+    height: auto;
+    margin-bottom: 1em;
+}
 
-        /* carrito */
-        .cart-container {
-            padding: 20px;
-        }
+.product-item h3 {
+    font-size: 1.2em;
+    margin-bottom: 0.5em;
+    color: #004080;
+}
 
-        .cart-items {
-            margin-bottom: 20px;
-        }
+.product-item p {
+    font-size: 1em;
+    color: #666;
+    margin-bottom: 1em;
+}
 
-        .cart-item {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            border-bottom: 1px solid #ddd;
-            padding: 10px 0;
-        }
+.product-item .price {
+    font-size: 1.1em;
+    font-weight: bold;
+    color: #4CAF50;
+}
 
-        .cart-item .item-name {
-            font-weight: bold;
-        }
+.product-item input[type="number"] {
+    width: 3em;
+    padding: 0.5em;
+    border: 1px solid #ddd;
+    border-radius: 0.2em;
+    margin-right: 0.5em;
+}
 
-        .cart-item .item-quantity {
-            margin: 0 10px;
-        }
+.product-item .add-to-cart {
+    background-color: #0056b3;
+    color: white;
+    border: none;
+    padding: 0.7em 1.2em;
+    border-radius: 0.3em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
 
-        .cart-total {
-            text-align: right;
-            font-size: 1.2em;
-            font-weight: bold;
-        }
+.product-item .add-to-cart:hover {
+    background-color: #004080;
+}
 
-        .checkout-button {
-            background-color: #0066cc;
-            color: white;
-            padding: 10px 20px;
-            border: none;
-            cursor: pointer;
-            font-size: 1.1em;
-            margin-top: 20px;
-        }
+/* Carrito Styles */
+.cart-container {
+    background-color: white;
+    padding: 1.5em;
+    margin: 1em auto;
+    max-width: 80%;
+    border-radius: 0.5em;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
 
-        .checkout-button:hover {
-            background-color: #0056b3;
-        }
+.cart-items {
+    margin-bottom: 1.5em;
+}
 
-        /* ayuda */
-       .ayuda-container {
-            padding: 20px;
-            background-color: #f9f9f9;
-            margin-top: 20px;
-        }
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.8em 0;
+    border-bottom: 1px solid #eee;
+}
 
-        .ayuda-container h2 {
-            color: #003366;
-        }
+.cart-item:last-child {
+    border-bottom: none;
+}
 
-        .ayuda-section {
-            margin-bottom: 15px;
-        }
+.cart-item .item-name {
+    font-weight: bold;
+    color: #333;
+}
 
-        .ayuda-section h3 {
-            border-bottom: 1px solid #ddd;
-            padding-bottom: 5px;
-            margin-bottom: 10px;
-        }
+.cart-item .item-quantity {
+    margin: 0 1em;
+    color: #666;
+}
 
-        .centrar_boton {
-            text-align: center;
-        }
+.cart-total {
+    text-align: right;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #333;
+    margin-top: 1em;
+}
 
-        /* ayuda */
-        .ayuda-container {
-            padding: 20px;
-            margin-top: 20px;
-            background-color: #003366;
-        }
+.checkout-button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 0.8em 1.5em;
+    border-radius: 0.3em;
+    cursor: pointer;
+    font-size: 1.1em;
+    display: block;
+    margin: 1em auto;
+    transition: background-color 0.3s ease;
+}
 
-        .ayuda-container h2 {
-            color: #fff;
-        }
+.checkout-button:hover {
+    background-color: #3e8e41;
+}
 
-        .ayuda-section {
-            margin-bottom: 15px;
-        }
+/* Ayuda estilos*/
+.ayuda-container {
+    background-color: white;
+    padding: 1.5em;
+    margin: 1em auto;
+    max-width: 80%;
+    border-radius: 0.5em;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
 
-        .ayuda-section h3 {
-            border-bottom: 1px solid #ddd;
-            padding-bottom: 5px;
-            margin-bottom: 10px;
-        }
+.ayuda-container h2 {
+    color: #004080;
+    text-align: center;
+    margin-bottom: 1em;
+}
 
-        .centrar {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            grid-gap: 18em;
-        }
+.ayuda-section {
+    margin-bottom: 1.5em;
+}
+
+.ayuda-section h3 {
+    font-size: 1.3em;
+    color: #333;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 0.5em;
+    margin-bottom: 0.8em;
+}
+
+.ayuda-section p {
+    font-size: 1.1em;
+    color: #666;
+    line-height: 1.6;
+}
+
+/* Factura estilo */
+.invoice-container {
+    background-color: white;
+    border-radius: 0.5em;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 2em;
+    max-width: 500px;
+    margin: auto;
+    position: relative;
+}
+
+.invoice-header h2 {
+    color: #004080;
+    text-align: center;
+    margin-bottom: 0.5em;
+}
+
+.invoice-header p {
+    text-align: center;
+    color: #666;
+    font-size: 1em;
+    margin-bottom: 1.5em;
+}
+
+.invoice-details {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1em;
+    color: #333;
+}
+
+.invoice-items {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 1.5em;
+}
+
+.invoice-items th, .invoice-items td {
+    padding: 0.8em;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+}
+
+.invoice-items th {
+    background-color: #f0f0f0;
+}
+
+.invoice-totals {
+    text-align: right;
+    margin-top: 1em;
+}
+
+.invoice-totals p {
+    font-size: 1.1em;
+    color: #333;
+    margin-bottom: 0.5em;
+}
+
+.invoice-totals p strong {
+    color: #004080;
+}
+
+.invoice-footer {
+    text-align: center;
+    margin-top: 2em;
+    color: #666;
+    font-size: 0.9em;
+}
