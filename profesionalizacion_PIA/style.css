@@ -199,3 +199,9 @@
             padding-bottom: 5px;
             margin-bottom: 10px;
         }
+
+        .centrar {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 18em;
+        }
