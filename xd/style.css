@@ -1,0 +1,201 @@
+        /* index */
+        .index-content {
+            padding: 20px;
+            margin-top: 20px;
+            color: #fff;
+        }
+
+        .featured-products {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .product-card {
+            border: 1px solid #ddd;
+            padding: 10px;
+            margin: 10px;
+            text-align: center;
+            width: 200px;
+        }
+
+        .product-card img {
+            max-width: 100%;
+            height: auto;
+        }
+        
+        .titulo-inicio {
+            color: #fff;
+            text-align: center;
+            margin-top: 20px;
+            font-size: 50px
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 50px;
+            margin-top: 20px;
+        }
+
+        .saludo_inicio {
+            color: #fff;
+            margin-top: 20px;
+            font-size: 30px;
+        }
+
+        /* producto */
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .product-item {
+            border: 1px solid #ddd;
+            padding: 15px;
+            text-align: center;
+        }
+
+        .product-item img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .product-item h3 {
+            margin-top: 10px;
+            font-size: 1.2em;
+        }
+
+        .product-item p {
+            margin: 10px 0;
+        }
+
+        .product-item .price {
+            font-weight: bold;
+            color: #0066cc;
+        }
+
+        .product-item .add-to-cart {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        .product-item .add-to-cart:hover {
+            background-color: #3e8e41;
+        }
+
+        .product-item input[type="number"] {
+            width: 50px;
+            padding: 5px;
+            margin-right: 5px;
+        }
+        .titulo-inicio {
+           color: #fff;
+           text-align: center;
+           margin-top: 20px;
+           font-size: 50px
+       }
+       nav {
+            display: flex;
+            justify-content: center;
+            gap: 50px;
+            margin-top: 20px;
+        }
+
+        /* carrito */
+        .cart-container {
+            padding: 20px;
+        }
+
+        .cart-items {
+            margin-bottom: 20px;
+        }
+
+        .cart-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #ddd;
+            padding: 10px 0;
+        }
+
+        .cart-item .item-name {
+            font-weight: bold;
+        }
+
+        .cart-item .item-quantity {
+            margin: 0 10px;
+        }
+
+        .cart-total {
+            text-align: right;
+            font-size: 1.2em;
+            font-weight: bold;
+        }
+
+        .checkout-button {
+            background-color: #0066cc;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            font-size: 1.1em;
+            margin-top: 20px;
+        }
+
+        .checkout-button:hover {
+            background-color: #0056b3;
+        }
+
+        /* ayuda */
+       .ayuda-container {
+            padding: 20px;
+            background-color: #f9f9f9;
+            margin-top: 20px;
+        }
+
+        .ayuda-container h2 {
+            color: #003366;
+        }
+
+        .ayuda-section {
+            margin-bottom: 15px;
+        }
+
+        .ayuda-section h3 {
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 5px;
+            margin-bottom: 10px;
+        }
+
+        .centrar_boton {
+            text-align: center;
+        }
+
+        /* ayuda */
+        .ayuda-container {
+            padding: 20px;
+            margin-top: 20px;
+            background-color: #003366;
+        }
+
+        .ayuda-container h2 {
+            color: #fff;
+        }
+
+        .ayuda-section {
+            margin-bottom: 15px;
+        }
+
+        .ayuda-section h3 {
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 5px;
+            margin-bottom: 10px;
+        }
