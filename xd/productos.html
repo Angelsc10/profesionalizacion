@@ -57,65 +57,76 @@
             padding: 5px;
             margin-right: 5px;
         }
+        .titulo-inicio {
+           color: #fff;
+           text-align: center;
+           margin-top: 20px;
+           font-size: 50px
+       }
+       nav {
+            display: flex;
+            justify-content: center;
+            gap: 50px;
+            margin-top: 20px;
+        }
     </style>
 </head>
 
-<body>
+<body bgcolor="#003366">
     <header>
-        <h1 class="titulo-inicio">Chamito Tech Tienda Electrónica</h1>
+        <h1 style="color: #fff;" class="titulo-inicio">Productos</h1>
     </header>
 
     <section class="nav-index">
         <nav>
-            <a style="color: #fff;" href="index.html">Inicio</a>
-            <a style="color: #fff;" href="productos.html">Productos</a>
-            <a style="color: #fff;" href="carrito.html">Carrito</a>
-            <a style="color: #fff;" href="ayuda.html">Ayuda</a>
+            <a style="color: #fff; font-size: 20px;" href="index.html">Inicio</a>
+            <a style="color: #fff; font-size: 20px;" href="carrito.html">Carrito</a>
+            <a style="color: #fff; font-size: 20px;" href="ayuda.html">Ayuda</a>
         </nav>
     </section>
 
-    <section class="product-grid">
-        <div class="product-item">
-            <img src="placeholder_computadora.jpg" alt="Computadora">
-            <h3>Computadora Gaming X</h3>
+    <section style="margin-top: 40px;" class="product-grid">
+        <div style="color: #fff; border-radius: 20px;" class="product-item">
+            <img src="https://www.pngarts.com/files/3/Computer-Desktop-PC-PNG-Pic.png" alt="Computadora">
+            <h3 style="margin-top: 40px;">Computadora Gaming X</h3>
             <p>Procesador Intel i7, 16GB RAM, SSD 512GB.</p>
-            <p class="price">$1200</p>
+            <p style="color: #fff;" class="price">$1200</p>
             <input type="number" value="1" min="1" class="quantity">
             <button class="add-to-cart" data-name="Computadora Gaming X" data-price="1200">Añadir al carrito</button>
         </div>
 
-        <div class="product-item">
-            <img src="placeholder_teclado.jpg" alt="Teclado">
-            <h3>Teclado Mecánico RGB</h3>
+        <div style="color: #fff; border-radius: 20px;" class="product-item">
+            <img style="margin-top: 20px;" src="https://co-media.hptiendaenlinea.com/catalog/product/cache/b3b166914d87ce343d4dc5ec5117b502/5/6/56R64AA-1_T1679069848.png" alt="Teclado">
+            <h3 style="margin-top: 50px;">Teclado Mecánico RGB</h3>
             <p>Teclado mecánico con retroiluminación RGB.</p>
-            <p class="price">$80</p>
+            <p style="color: #fff;" class="price">$80</p>
             <input type="number" value="1" min="1" class="quantity">
             <button class="add-to-cart" data-name="Teclado Mecánico RGB" data-price="80">Añadir al carrito</button>
         </div>
 
-        <div class="product-item">
-            <img src="placeholder_mouse.jpg" alt="Mouse">
-            <h3>Mouse Inalámbrico Pro</h3>
+        <div style="color: #fff; border-radius: 20px;" class="product-item">
+            <img style="margin-top: 60px;" src="https://www.pngarts.com/files/4/PC-Mouse-PNG-Image.png" alt="Mouse">
+            <h3 style="margin-top: 55px;">Mouse Inalámbrico Pro</h3>
             <p>Mouse inalámbrico de alta precisión.</p>
-            <p class="price">$50</p>
+            <p style="color: #fff;" class="price">$50</p>
             <input type="number" value="1" min="1" class="quantity">
             <button class="add-to-cart" data-name="Mouse Inalámbrico Pro" data-price="50">Añadir al carrito</button>
         </div>
 
-        <div class="product-item">
-            <img src="placeholder_audifonos.jpg" alt="Audíonos">
+        <div style="color: #fff; border-radius: 20px;" class="product-item">
+            <img src="https://balamrush.com/cdn/shop/files/BR-941211_2.png?v=1732232287" alt="Audíonos">
             <h3>Audíonos Gaming 7.1</h3>
             <p>Audíonos de alta calidad con sonido envolvente 7.1.</p>
-            <p class="price">$120</p>
+            <p style="color: #fff;" class="price">$120</p>
             <input type="number" value="1" min="1" class="quantity">
             <button class="add-to-cart" data-name="Audíonos Gaming 7.1" data-price="120">Añadir al carrito</button>
         </div>
 
-        <div class="product-item">
-            <img src="placeholder_monitor.jpg" alt="Monitor">
+        <div style="color: #fff; border-radius: 20px;" class="product-item">
+            <img src="https://i02.appmifile.com/419_item_mx/16/04/2024/fbf1d082d4d41630640a204adac906d7!400x400!85.png" alt="Monitor">
             <h3>Monitor 27" Curvo</h3>
             <p>Monitor curvo de 27 pulgadas con resolución 1440p.</p>
-            <p class="price">$300</p>
+            <p style="color: #fff;" class="price">$300</p>
             <input type="number" value="1" min="1" class="quantity">
             <button class="add-to-cart" data-name="Monitor 27\" Curvo" data-price="300">Añadir al carrito</button>
         </div>

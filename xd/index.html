@@ -8,10 +8,9 @@
     <link rel="stylesheet" href="style.css">
     <style>
         .index-content {
-            background-color: #f0f0f0;
             padding: 20px;
             margin-top: 20px;
-            color: #333;
+            color: #fff;
         }
 
         .featured-products {
@@ -33,6 +32,28 @@
             max-width: 100%;
             height: auto;
         }
+        
+        .titulo-inicio {
+            color: #fff;
+            text-align: center;
+            margin-top: 20px;
+            font-size: 50px
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 50px;
+            margin-top: 20px;
+        }
+
+        .saludo_inicio {
+            color: #fff;
+            margin-top: 20px;
+            font-size: 30px;
+        }
+
+        
     </style>
 </head>
 
@@ -43,7 +64,6 @@
 
     <section class="nav-index">
         <nav>
-            <a style="color: #fff;" href="index.html">Inicio</a>
             <a style="color: #fff;" href="productos.html">Productos</a>
             <a style="color: #fff;" href="carrito.html">Carrito</a>
             <a style="color: #fff;" href="ayuda.html">Ayuda</a>
@@ -51,7 +71,7 @@
     </section>
 
     <section class="index-content">
-        <h2>Bienvenido a Chamito Tech</h2>
+        <h2 class="saludo_inicio">Bienvenido a Chamito Tech</h2>
         <p>
             En Chamito Tech, nos apasiona ofrecerte lo último en tecnología. Encuentra computadoras de alto rendimiento,
             teclados ergonómicos, mouses precisos, audífonos de calidad de sonido superior y monitores de alta resolución.
@@ -59,19 +79,19 @@
         </p>
 
         <section class="featured-products">
-            <div class="product-card">
-                <img src="placeholder_computadora.jpg" alt="Computadora">
+            <div style="border-radius: 20px;" class="product-card">
+                <img style="border-radius: 20px;" src="https://www.pngarts.com/files/3/Computer-Desktop-PC-PNG-Pic.png" alt="Computadora">
                 <h3>Computadora Potente</h3>
                 <p>La mejor para juegos y trabajo.</p>
             </div>
-            <div class="product-card">
-                <img src="placeholder_teclado.jpg" alt="Teclado">
+            <div style="border-radius: 20px;" class="product-card">
+                <img style="border-radius: 20px;" src="https://co-media.hptiendaenlinea.com/catalog/product/cache/b3b166914d87ce343d4dc5ec5117b502/5/6/56R64AA-1_T1679069848.png" alt="Teclado">
                 <h3>Teclado Mecánico</h3>
                 <p>Para escribir con precisión.</p>
             </div>
-            <div class="product-card">
-                <img src="placeholder_mouse.jpg" alt="Mouse">
-                <h3>Mouse Ergonómico</h3>
+            <div style="border-radius: 20px;" class="product-card">
+                <img style="border-radius: 20px;" src="https://www.pngarts.com/files/4/PC-Mouse-PNG-Image.png" alt="Mouse">
+                <h3>Mouse</h3>
                 <p>Comodidad durante horas.</p>
             </div>
         </section>
